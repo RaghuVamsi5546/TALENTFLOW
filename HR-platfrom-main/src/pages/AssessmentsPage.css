@@ -1,0 +1,149 @@
+.assessments-page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.assessments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.assessments-header h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.mode-toggle {
+  display: flex;
+  gap: 8px;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.mode-btn {
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.mode-btn:hover:not(:disabled) {
+  color: #374151;
+  background: #e5e7eb;
+}
+
+.mode-btn.active {
+  background: white;
+  color: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.mode-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Table styling for Assessments job picker */
+.assessments-table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 4px 20px rgba(55, 65, 81, 0.05);
+}
+.assessments-job-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 500px;
+}
+.assessments-job-table th, .assessments-job-table td {
+  padding: 1em 1.2em;
+  text-align: left;
+  font-size: 1.01rem;
+}
+.assessments-job-table th {
+  background: #f5f6fa;
+  color: #222b45;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  font-size: 1.07rem;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+.assessments-job-row {
+  background: #fff;
+  border-bottom: 1px solid #f2f4f6;
+  transition: background 0.12s;
+}
+.assessments-job-row:nth-child(even) {
+  background: #f7fafb;
+}
+.assessments-job-row:hover {
+  background: #eef5fc;
+}
+.btn-secondary.btn-sm {
+  border-radius: 7px;
+  padding: 0.5em 1.3em;
+  background: #f3f7fa;
+  color: #1e293b;
+  border: 1px solid #ccd6df;
+  font-size: 0.97em;
+}
+.btn-secondary.btn-sm:hover {
+  background: #e1ecf6;
+}
+@media (max-width: 700px) {
+  .assessments-job-table th, .assessments-job-table td {
+    padding: 0.6em 0.5em;
+    font-size: 0.97em;
+  }
+  .assessments-job-table {
+    min-width: 350px;
+  }
+}
+.job-list { display: none; }
+
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.loading {
+  color: #6b7280;
+}
+
+.error {
+  color: #ef4444;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .assessments-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+  
+  .mode-toggle {
+    justify-content: center;
+  }
+  
+  .job-list {
+    grid-template-columns: 1fr;
+  }
+}

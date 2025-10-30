@@ -1,0 +1,80 @@
+/* Minimal clean candidate table */
+.candidates-table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 4px 20px rgba(55, 65, 81, 0.04);
+  margin-bottom: 2rem;
+}
+.candidates-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 700px;
+}
+.candidates-table th, .candidates-table td {
+  padding: 1em 1.2em;
+  text-align: left;
+  font-size: 1.01rem;
+}
+.candidates-table th {
+  background: #f5f6fa;
+  color: #222b45;
+  font-weight: bold;
+  font-size: 1.07rem;
+  letter-spacing: 1.1px;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+.candidates-table-row {
+  background: #fff;
+  border-bottom: 1px solid #f1f3f9;
+  transition: background 0.13s;
+}
+.candidates-table-row:nth-child(even) {
+  background: #f7fafb;
+}
+.candidates-table-row:hover {
+  background: #eef5fc;
+}
+.stage-dropdown {
+  border-radius: 6px;
+  border: 1px solid #cfd8dc;
+  padding: 5px 12px;
+  font-size: 1em;
+  background: #fafbfc;
+  color: #364152;
+  outline: none;
+  transition: box-shadow 0.13s, border-color 0.13s;
+}
+.stage-dropdown:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px #bae6fd;
+}
+.btn-secondary.btn-sm {
+  border-radius: 7px;
+  padding: 0.5em 1.1em;
+  background: #f3f7fa;
+  color: #1e293b;
+  border: 1px solid #ccd6df;
+  font-size: 0.97em;
+}
+.btn-secondary.btn-sm:hover {
+  background: #e1ecf6;
+}
+/* Responsive for mobile screens */
+@media (max-width: 700px) {
+  .candidates-table th, .candidates-table td {
+    padding: 0.6em 0.5em;
+    font-size: 0.97em;
+  }
+  .candidates-table {
+    min-width: 400px;
+  }
+}
+/* Remove old candidates list/list-header/candidate-row CSS */
+.candidates-list, .list-header, .candidate-row, .candidate-name, .candidate-email, .candidate-date, .stage-selector, .candidates-loading, .candidates-empty {
+  all: unset;
+  display: revert;
+}
